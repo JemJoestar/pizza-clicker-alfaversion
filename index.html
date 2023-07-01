@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    
+    <main>
+      <p class="text">Pizza Clicker</p>
+      <div class="game-pole">
+        <!-- * Left side -->
+        <div class="left-side side">
+          <p class="text score">Your clicks: 0</p>
+          <button type="button" class="clickable-element"></button>
+          <div class="click-skills">
+            <p class="text clicks-per-click">
+              Clicks per click: 1
+            </p>
+            <p class="text max-clicks-per-second">
+              Max clicks per second: 2
+            </p>
+          </div>
+        </div>
+        <!--* Right side -->
+        <div class="right-side side">
+          <ul class="upgrades">
+            <li class="upgrade-item">
+              <p class="text">+1 per click</p>
+              <button
+                class="update-btn"
+                type="button"
+                data-updatenumber="1"
+                data-cost="25"
+                data-level="0"
+              >
+                25 clicks
+              </button>
+              <p class="level-display">
+                Level 0
+              </p>
+            </li>
+            <li class="upgrade-item">
+              <p class="text">+0.1 max clicks per second</p>
+              <button
+                class="update-btn"
+                type="button"
+                data-updatenumber="2"
+                data-cost="25"
+                data-level="0"
+              >
+                25 clicks
+              </button>
+              <p class="level-display">
+                Level 0
+              </p>
+            </li>
+            
+            <li class="upgrade-item">
+              <p class="text">+5 per click</p>
+              <button
+                class="update-btn"
+                type="button"
+                data-updatenumber="3"
+                data-cost="250"
+                data-level="0"
+              >
+                250 clicks
+              </button>
+              <p class="level-display">
+                Level 0
+              </p>
+            </li>
+            <li class="upgrade-item">
+              <p class="text">+0.5 max clicks per second</p>
+              <button
+                class="update-btn"
+                type="button"
+                data-cost="250"
+                data-updatenumber="4"
+                data-level="0"
+              >
+                250 clicks
+              </button>
+              <p class="level-display">
+                Level 0
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+      integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="module" src="./js/script.js"></script>
+  </body>
+</html>

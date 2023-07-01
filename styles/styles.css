@@ -1,0 +1,36 @@
+      .text {
+        text-align: center;
+        color: #000000;
+        font-size: 20px;
+        margin: 0;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        font-family: sans-serif;
+      }
+      .clickable-element {
+        width: 200px;
+        height: 200px;
+        border: none;
+        background-color: #513a3a;
+        border-radius: 50%;
+        padding: 0;
+
+        background-image: linear-gradient(45deg, #513a3a, #826c6c);
+      }
+      .game-pole {
+        display: flex;
+        justify-content: space-between;
+        background-color: #a4a1a1;
+        width: 500px;
+        padding: 40px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      .side {
+        width: 45%;
+      }
+      .left-side {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
