@@ -8,10 +8,15 @@ let currentScore = 0;
 let clicksPerClick = 1;
 let maxClicksPerSecond = 2;
 
-clickableEl.addEventListener("click", _.throttle(() => {
+clickableEl.addEventListener("click", _.throttle((event) => {
   currentScore += clicksPerClick;
-  scoreEl.textContent = `Your clicks: ${currentScore}`;
+  scoreEl.textContent = `Your $: ${currentScore}`;
+  event.currentTarget.classList.add("animate")
 }, (1000/maxClicksPerSecond)));
+
+clickableEl.addEventListener("animationend", (event)=>{
+  event.currentTarget.classList.remove("animate")
+})
 
 upgradesListEl.addEventListener("click", (event) => {
   const currentClickedElement = event.target;
@@ -31,11 +36,11 @@ function getUpdateCallback(element) {
         clicksPerClick += 1;
         currentScore -= cost;
         element.dataset.cost = Math.ceil(cost * 0.11)*10;
-        element.textContent = `${element.dataset.cost} clicks`
+        element.textContent = `${element.dataset.cost} $`
         element.dataset.level = Number(element.dataset.level) + 1
         element.nextElementSibling.textContent = `Level ${element.dataset.level}`
-        scoreEl.textContent = `Your clicks: ${currentScore}`;
-        clicksPerClickDisplayEl.textContent = `Clicks per click: ${clicksPerClick}`
+        scoreEl.textContent = `Your $: ${currentScore}`;
+        clicksPerClickDisplayEl.textContent = `${clicksPerClick}`
       };
       break;
     }
@@ -44,11 +49,11 @@ function getUpdateCallback(element) {
         maxClicksPerSecond = (parseFloat(maxClicksPerSecond) + 0.1).toFixed(1) 
         currentScore -= cost
         element.dataset.cost = Math.ceil(cost * 1.05);
-        element.textContent = `${element.dataset.cost} clicks`
+        element.textContent = `${element.dataset.cost} $`
         element.dataset.level = Number(element.dataset.level) + 1
         element.nextElementSibling.textContent = `Level ${element.dataset.level}`
-        scoreEl.textContent = `Your clicks: ${currentScore}`;
-        maxClicksPerSecondDisplayEl.textContent = `Max clicks per second: ${maxClicksPerSecond}`
+        scoreEl.textContent = `Your $: ${currentScore}`;
+        maxClicksPerSecondDisplayEl.textContent = `${maxClicksPerSecond}`
       }
     }
     case "3": {
@@ -56,11 +61,11 @@ function getUpdateCallback(element) {
         clicksPerClick += 5;
         currentScore -= cost;
         element.dataset.cost = Math.ceil(cost * 0.11)*10;
-        element.textContent = `${element.dataset.cost} clicks`
+        element.textContent = `${element.dataset.cost} $`
         element.dataset.level = Number(element.dataset.level) + 1
         element.nextElementSibling.textContent = `Level ${element.dataset.level}`
-        scoreEl.textContent = `Your clicks: ${currentScore}`;
-        clicksPerClickDisplayEl.textContent = `Clicks per click: ${clicksPerClick}`
+        scoreEl.textContent = `Your $: ${currentScore}`;
+        clicksPerClickDisplayEl.textContent = `${clicksPerClick}`
         
       }
       break
@@ -70,11 +75,11 @@ function getUpdateCallback(element) {
         maxClicksPerSecond =  (parseFloat(maxClicksPerSecond) + 0.5).toFixed(1) 
         currentScore -= cost
         element.dataset.cost = Math.ceil(cost * 1.05);
-        element.textContent = `${element.dataset.cost} clicks`
+        element.textContent = `${element.dataset.cost} $`
         element.dataset.level = Number(element.dataset.level) + 1
         element.nextElementSibling.textContent = `Level ${element.dataset.level}`
-        scoreEl.textContent = `Your clicks: ${currentScore}`;
-        maxClicksPerSecondDisplayEl.textContent = `Max clicks per second: ${maxClicksPerSecond}`
+        scoreEl.textContent = `Your $: ${currentScore}`;
+        maxClicksPerSecondDisplayEl.textContent = `${maxClicksPerSecond}`
 
       }
       break

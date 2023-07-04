@@ -4,31 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Nanum+Myeongjo:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/modern-normalize.css" />
     <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
-    
     <main>
-      <p class="text">Pizza Clicker</p>
+      <h1 class="title">Pizza Clicker</h1>
       <div class="game-pole">
         <!-- * Left side -->
         <div class="left-side side">
-          <p class="text score">Your clicks: 0</p>
+          <p class="text score">Your $: 0</p>
           <button type="button" class="clickable-element"></button>
-          <div class="click-skills">
-            <p class="text clicks-per-click">
-              Clicks per click: 1
-            </p>
-            <p class="text max-clicks-per-second">
-              Max clicks per second: 2
-            </p>
-          </div>
+          <ul class="click-skills">
+            <li class="cpc skill-item ">
+              <img src="./img/tapclock.png" alt="" class="skill-icon">
+              <span class="text skill-text clicks-per-click">1</span>
+            </li>
+            <li class="maxcps skill-item">
+              <img src="./img/tapflame.png" alt="" class="skill-icon">
+              <span class="text skill-text max-clicks-per-second">2</span>
+            </li>
+          </ul>
         </div>
         <!--* Right side -->
         <div class="right-side side">
           <ul class="upgrades">
             <li class="upgrade-item">
-              <p class="text">+1 per click</p>
+              <h2 class="text">+1$ per click</h2>
               <button
                 class="update-btn"
                 type="button"
@@ -36,14 +44,12 @@
                 data-cost="25"
                 data-level="0"
               >
-                25 clicks
+                25 $
               </button>
-              <p class="level-display">
-                Level 0
-              </p>
+              <p class="level-display">Level 0</p>
             </li>
             <li class="upgrade-item">
-              <p class="text">+0.1 max clicks per second</p>
+              <h2 class="text">+0.1 max clicks per second</h2>
               <button
                 class="update-btn"
                 type="button"
@@ -51,15 +57,13 @@
                 data-cost="25"
                 data-level="0"
               >
-                25 clicks
+                25 $
               </button>
-              <p class="level-display">
-                Level 0
-              </p>
+              <p class="level-display">Level 0</p>
             </li>
-            
+
             <li class="upgrade-item">
-              <p class="text">+5 per click</p>
+              <h2 class="text">+5$ per click</h2>
               <button
                 class="update-btn"
                 type="button"
@@ -67,14 +71,12 @@
                 data-cost="250"
                 data-level="0"
               >
-                250 clicks
+                250 $
               </button>
-              <p class="level-display">
-                Level 0
-              </p>
+              <p class="level-display">Level 0</p>
             </li>
             <li class="upgrade-item">
-              <p class="text">+0.5 max clicks per second</p>
+              <h2 class="text">+0.5 max clicks per second</h2>
               <button
                 class="update-btn"
                 type="button"
@@ -82,11 +84,9 @@
                 data-updatenumber="4"
                 data-level="0"
               >
-                250 clicks
+                250 $
               </button>
-              <p class="level-display">
-                Level 0
-              </p>
+              <p class="level-display">Level 0</p>
             </li>
           </ul>
         </div>

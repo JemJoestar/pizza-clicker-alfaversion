@@ -1,36 +1,231 @@
-      .text {
-        text-align: center;
-        color: #000000;
-        font-size: 20px;
-        margin: 0;
-        margin-bottom: 20px;
-        margin-top: 10px;
-        font-family: sans-serif;
-      }
-      .clickable-element {
-        width: 200px;
-        height: 200px;
-        border: none;
-        background-color: #513a3a;
-        border-radius: 50%;
-        padding: 0;
+:root {
+  --title-font: "Nanum Myeongjo", serif;
+  --text-font: "Hina Mincho", serif;
+}
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+}
+body {
+  background-image: linear-gradient(180deg, #f8be67 0%, #ece285 100%);
+  margin: 0;
+  font-family: var(--text-font);
+}
 
-        background-image: linear-gradient(45deg, #513a3a, #826c6c);
-      }
-      .game-pole {
-        display: flex;
-        justify-content: space-between;
-        background-color: #a4a1a1;
-        width: 500px;
-        padding: 40px;
-        margin-right: auto;
-        margin-left: auto;
-      }
-      .side {
-        width: 45%;
-      }
-      .left-side {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
+@keyframes pizza-animation{
+  0%{
+    transform: scale(100%)
+  }
+  50%{
+    transform: scale(110%);
+  }
+  100%{
+    transform: scale(100%);
+  }
+}
+
+.title {
+  font-family: var(--title-font);
+  font-size: 32px;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+@media only screen and (min-width: 768px) {
+  .title {
+    font-size: 44px;
+  }
+}
+
+.game-pole {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 1024px) {
+  .game-pole {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(239, 217, 174, 0.58);
+  border-radius: 16px;
+  max-width: 358px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 16px 43px 24px;
+  margin-bottom: 28px;
+}
+
+@media only screen and (min-width: 768px) {
+  .left-side {
+    min-width: 624px;
+    max-width: 624px;
+    padding: 26px 92px 48px;
+    margin-bottom: 48px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .left-side {
+    margin-left: 42px;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+
+.score {
+  font-size: 24px;
+  margin: 0;
+  text-align: center;
+  margin-bottom: 16px;
+}
+@media only screen and (min-width: 768px) {
+  .score {
+    margin-bottom: 26px;
+    font-size: 34px;
+  }
+}
+
+.clickable-element {
+  width: 272px;
+  height: 272px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+}
+@media only screen and (min-width: 768px) {
+  .clickable-element {
+    width: 440px;
+    height: 440px;
+  }
+}
+
+.click-skills{
+  display: flex;
+  flex-direction: column;
+  font-family: var(--text-font);
+  font-size: 28px;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+}
+@media only screen and (min-width: 768px) {
+  .click-skills {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+
+
+.skill-icon{
+  width: 48px;
+  height: 48px;
+}
+@media only screen and (min-width: 768px) {
+  .skill-icon {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.right-side{
+  background-color: rgba(239, 217, 174, 0.58);
+  ;
+  max-width: 358px;
+  margin-left: auto;margin-right: auto;
+  border-radius: 16px;
+  padding: 32px 42px 42px 42px;
+
+}
+@media only screen and (min-width: 768px) {
+  .right-side {
+  padding: 34px 20px;
+
+    max-width: 624px;
+    min-width: 624px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .right-side {
+    max-width: 516px;
+    min-width: 516px;
+  }
+}
+
+.upgrades{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center ;
+  row-gap: 16px;
+  column-gap: 20px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .upgrades {
+    gap: 32px;
+  }
+}
+
+
+.upgrade-item{
+  background-color: #EBECAB;
+  padding: 8px;
+  border-radius: 8px;
+  width: 272px;
+}
+@media only screen and (min-width: 1024px) {
+  .upgrade-item {
+    width: 334px;
+  }
+}
+.upgrade-item > h2{
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+@media only screen and (min-width: 1024px) {
+  .upgrade-item > h2 {
+    font-size: 24px;
+  }
+}
+
+.update-btn{
+  margin-bottom: 8px;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  background-color: #F0C789;
+
+}
+@media only screen and (min-width: 1024px) {
+  .update-btn {
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+
+.level-display{
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+}
+@media only screen and (min-width: 1024px) {
+  .level-display {
+    font-size: 16px;
+  }
+}
+
+.animate{
+  animation: pizza-animation 100ms;
+}
