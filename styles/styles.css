@@ -2,7 +2,12 @@
   --title-font: "Nanum Myeongjo", serif;
   --text-font: "Hina Mincho", serif;
 }
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 body {
@@ -11,14 +16,14 @@ body {
   font-family: var(--text-font);
 }
 
-@keyframes pizza-animation{
-  0%{
-    transform: scale(100%)
+@keyframes pizza-animation {
+  0% {
+    transform: scale(100%);
   }
-  50%{
+  50% {
     transform: scale(110%);
   }
-  100%{
+  100% {
     transform: scale(100%);
   }
 }
@@ -105,7 +110,7 @@ body {
   }
 }
 
-.click-skills{
+.click-skills {
   display: flex;
   flex-direction: column;
   font-family: var(--text-font);
@@ -121,9 +126,7 @@ body {
   }
 }
 
-
-
-.skill-icon{
+.skill-icon {
   width: 48px;
   height: 48px;
 }
@@ -134,18 +137,17 @@ body {
   }
 }
 
-.right-side{
+.right-side {
   background-color: rgba(239, 217, 174, 0.58);
-  ;
   max-width: 358px;
-  margin-left: auto;margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 16px;
   padding: 32px 42px 42px 42px;
-
 }
 @media only screen and (min-width: 768px) {
   .right-side {
-  padding: 34px 20px;
+    padding: 34px 20px;
 
     max-width: 624px;
     min-width: 624px;
@@ -155,13 +157,15 @@ body {
   .right-side {
     max-width: 516px;
     min-width: 516px;
+    margin-left: 0;
+    margin-right: 38px;
   }
 }
 
-.upgrades{
+.upgrades {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center ;
+  justify-content: center;
   row-gap: 16px;
   column-gap: 20px;
   margin: 0;
@@ -176,9 +180,8 @@ body {
   }
 }
 
-
-.upgrade-item{
-  background-color: #EBECAB;
+.upgrade-item {
+  background-color: #ebecab;
   padding: 8px;
   border-radius: 8px;
   width: 272px;
@@ -188,7 +191,7 @@ body {
     width: 334px;
   }
 }
-.upgrade-item > h2{
+.upgrade-item > h2 {
   margin-bottom: 8px;
   font-size: 20px;
 }
@@ -198,15 +201,14 @@ body {
   }
 }
 
-.update-btn{
+.update-btn {
   margin-bottom: 8px;
   font-size: 12px;
   text-align: center;
   font-weight: 600;
   border: none;
   border-radius: 4px;
-  background-color: #F0C789;
-
+  background-color: #f0c789;
 }
 @media only screen and (min-width: 1024px) {
   .update-btn {
@@ -215,7 +217,7 @@ body {
   }
 }
 
-.level-display{
+.level-display {
   margin: 0;
   font-size: 12px;
   font-weight: 500;
@@ -226,6 +228,6 @@ body {
   }
 }
 
-.animate{
+.animate {
   animation: pizza-animation 100ms;
 }
